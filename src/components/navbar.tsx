@@ -10,7 +10,10 @@ const NavBar = () => {
                 {menuItems.map((item) => {
                     return (
                         <Link href={"/" + item}>
-                            <li className="ml-10 text-sm uppercase hover:border-b">
+                            <li
+                                key={item}
+                                className="ml-10 text-sm uppercase hover:border-b"
+                            >
                                 {item}
                             </li>
                         </Link>
@@ -25,7 +28,9 @@ const NavBar = () => {
                 {menuItems.map((item) => {
                     return (
                         <Link href={"/" + item}>
-                            <li className="py-4 text-sm ">{item}</li>
+                            <li key={item} className="py-4 text-sm ">
+                                {item}
+                            </li>
                         </Link>
                     );
                 })}
@@ -33,9 +38,9 @@ const NavBar = () => {
         );
     };
     return (
-        <div className="fixed w-full h-20 shadow-xl z-[100]">
+        <div className="fixed w-full h-20 shadow-xl bg-neutral-900 text-white z-[100]">
             <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-                <Image src="" alt="/" />
+                <Image src="/favicon.ico" width={50} height={50} alt="/" />
                 <div>
                     <Links />
                     <div className="md:hidden">
@@ -43,7 +48,7 @@ const NavBar = () => {
                     </div>
                 </div>
 
-                <div className="fixed left-0 top-0 w-full h-screen bg-black/70">
+                {/*   <div className="fixed left-0 top-0 w-full h-screen bg-black/70">
                     <div className="fixed left-0 top-0 w-[75%] sm:w-[65%] md:w-[50%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500">
                         <div className="flex w-full items-center justify-between">
                             <Image src="" width="87" height="35" alt="/" />
@@ -61,7 +66,7 @@ const NavBar = () => {
                             <VerticalLinks />
                         </div>
                     </div>
-                </div>
+    </div>*/}
             </div>
         </div>
     );
