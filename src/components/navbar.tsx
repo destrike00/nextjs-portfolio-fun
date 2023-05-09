@@ -9,7 +9,11 @@ const NavBar = () => {
             <ul className="hidden md:flex">
                 {menuItems.map((item) => {
                     return (
-                        <Link href={"/" + item}>
+                        <Link
+                            href={
+                                item === "Home" ? "/" : "/" + item.toLowerCase()
+                            }
+                        >
                             <li
                                 key={item}
                                 className="ml-10 text-sm uppercase hover:border-b"
@@ -38,7 +42,7 @@ const NavBar = () => {
         );
     };
     return (
-        <div className="fixed w-full h-20 shadow-xl bg-neutral-900 text-white z-[100]">
+        <div className="fixed w-full h-20 shadow-xl bg-black text-white z-[100]">
             <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
                 <Image src="/favicon.ico" width={50} height={50} alt="/" />
                 <div>

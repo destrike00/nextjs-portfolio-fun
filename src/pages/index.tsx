@@ -1,4 +1,3 @@
-import NavBar from "@/components/navbar";
 import Head from "next/head";
 import Script from "next/script";
 import { Stars } from "@/components/main";
@@ -9,10 +8,6 @@ export default function Home() {
             <Head>
                 <title>Áron Kisszölgyémi | Frontend Developer</title>
             </Head>
-
-            <NavBar />
-
-            <canvas id="bg"></canvas>
 
             <main>
                 <header>
@@ -111,8 +106,6 @@ export default function Home() {
                     </p>
                 </section>
             </main>
-
-            <Stars />
         </div>
     );
 }
